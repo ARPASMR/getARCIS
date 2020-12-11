@@ -1,2 +1,2 @@
 # getARCIS
-acquisizione (e in futuro forse qualche elaborazione)
+acquisizione dataset operativo ARCIS (e in futuro forse qualche elaborazione)
