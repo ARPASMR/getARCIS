@@ -3,15 +3,14 @@
 export https_proxy="http://proxy2:8080"
 export http_proxy="http://proxy2:8080"
 
-numsec=600 # 10 minuti 
-./getcsv_from_ftp_rem2.sh
-sleep $numsec
 while [ 1 ]
 do
-  if [ $SECONDS -ge $numsec ]
+  giorno=`date +%d`
+  if [[ " $giorno " = " 28" ]]
   then
-    SECONDS=0
-    ./download_arcis.sh
-    sleep $numsec
+    ./download_arcis.sh > download_arcis.log 2>&1
+    sleep 1d
+  else
+    sleep 1d
   fi
 done
