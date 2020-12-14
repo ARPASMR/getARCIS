@@ -16,12 +16,9 @@ mese_inizio=$(date --date="last month" +%m)
 giorno_inizio=$anno_inizio-$mese_inizio-01
 #echo $giorno_inizio
 echo "Chiedo i dati per: anno " $anno_inizio ", mese: " $mese_inizio
-#giorno_fine=$(date -d "yesterday $anno_inizio-$(($mese_inizio+1))-01" +%Y-%m-%d) 
-giorno_fine=$(date +%Y-%m)-01
-echo $giorno_fine
 
 echo " ------------------------------------------------ "
-cd /home/meteo/sviluppo_ARCIS/download && echo "directory di lavoro: "$PWD
+echo "directory di lavoro: "$PWD
 echo " ------------------------------------------------ "
 
 echo " ------------------------------------------------ "
