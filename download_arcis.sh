@@ -20,8 +20,6 @@ echo "Chiedo i dati per: anno " $anno_inizio ", mese: " $mese_inizio
 giorno_fine=$(date +%Y-%m)-01
 echo $giorno_fine
 
-source variabili
-
 echo " ------------------------------------------------ "
 cd /home/meteo/sviluppo_ARCIS/download && echo "directory di lavoro: "$PWD
 echo " ------------------------------------------------ "
