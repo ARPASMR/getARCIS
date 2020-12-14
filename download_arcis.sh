@@ -37,11 +37,11 @@ $FTP -n -v -d $ARCIS_FTP <<FINE2 > $LOGFILE 2>&1
 FINE2
 
 #   inserisco chiamata syslogger
-    if [[ "$?" -ge "300" ]]; then
-      logger -i -s -p user.err "Problema nel download dataset ARCIS $mese_inizio/$anno_inizio " -t "DATI"
-    else
-      logger -i -s -p user.notice "Trasferimento dataset $mese_inizio/$anno_inizio da ftp ARCIS  completato" -t "DATI"
-    fi
+#   if [[ "$?" -ge "300" ]]; then
+#      logger -i -s -p user.err "Problema nel download dataset ARCIS $mese_inizio/$anno_inizio " -t "DATI"
+#    else
+#      logger -i -s -p user.notice "Trasferimento dataset $mese_inizio/$anno_inizio da ftp ARCIS  completato" -t "DATI"
+#    fi
 #   fine chiamata syslogger
 
 /usr/bin/smbclient //$WEBPREVIP/$WEBPREVDIR -U $WEBPREVUSR%$WEBPREVPWD <<End-of-smbclient8
