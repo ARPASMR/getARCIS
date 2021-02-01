@@ -5,8 +5,8 @@ export http_proxy="http://proxy2:8080"
 
 while [ 1 ]
 do
-  giorno=`date +%d`
-  if [[ " $giorno " = " 28" ]]
+  giorno=`date +%e`
+  if [ $giorno = 28 ]
   then
     ./download_arcis.sh > download_arcis.log 2>&1
     sleep 1d
