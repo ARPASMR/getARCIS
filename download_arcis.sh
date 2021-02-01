@@ -23,7 +23,7 @@ echo " Scarico dataset arcis: ARCIS_GG_"$anno_inizio""$mese_inizio".nc"
 echo " ------------------------------------------------ "
 
 
-while [! -f "DATASET/ARCIS_GG_"$anno_inizio""$mese_inizio".nc" ]
+while [ ! -f "DATASET/ARCIS_GG_"$anno_inizio""$mese_inizio".nc" ]
 do 
 
 echo " ----  ftp arpa piemonte -------"
