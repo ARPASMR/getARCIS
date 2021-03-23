@@ -40,12 +40,16 @@ FINE2
 sleep 1d
 done
 
+cdo timsum DATASET/ARCIS_GG_"$anno_inizio""$mese_inizio".nc MENSILI/ARCIS_"$anno_inizio""$mese_inizio".nc
 
 /usr/bin/smbclient //$WEBPREVIP/$WEBPREVDIR -U $WEBPREVUSR%$WEBPREVPWD <<End-of-smbclient8
 prompt
 cd $WEBPREVDIR2
 lcd DATASET
 put ARCIS_GG_"$anno_inizio""$mese_inizio".nc
+lcd ../MENSILI
+cd ../cumulata_mensile
+put ARCIS_"$anno_inizio""$mese_inizio".nc
 End-of-smbclient8
 
 exit 0
