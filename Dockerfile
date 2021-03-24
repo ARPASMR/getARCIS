@@ -1,6 +1,7 @@
 FROM arpasmr/r-base
 RUN apt-get update
 RUN apt-get install -y ftp 
+RUN apt-get install -y cdo
 RUN apt-get install -y smbclient
 
 COPY . /usr/local/src/myscripts
