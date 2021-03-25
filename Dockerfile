@@ -9,7 +9,7 @@ RUN apt-get update && apt-get install -y wget g++ make \
     && rm -rf /var/lib/apt/lists/*
 # Set up the components needed for format support for cdo
 RUN apt-get update && apt-get install -y \
-    nco netcdf-bin libhdf5-dev zlib1g-dev libjasper-dev libnetcdf-dev libgrib-api-dev \
+    nco netcdf-bin libhdf5-dev zlib1g-dev libjasper-dev libnetcdf-dev grib-api \
     && rm -rf /var/lib/apt/lists/*
 # Install cdo from source, so that we get other format support
 WORKDIR /tmp
