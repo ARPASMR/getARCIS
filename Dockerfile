@@ -5,6 +5,12 @@ FROM ubuntu:14.04.5
 RUN apt-get update && apt-get install -y wget g++ make \
     && rm -rf /var/lib/apt/lists/*
 
+# R  
+RUN apt-get install software-properties-common
+RUN add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu trusty/"
+RUN apt-get update
+RUN apt-get install -y r-base
+
 # Set up the components needed for format support for cdo
 RUN apt-get update && apt-get install -y \
     nco netcdf-bin libhdf5-dev zlib1g-dev libjasper-dev libnetcdf-dev libgrib-api-dev \
@@ -20,10 +26,7 @@ RUN wget https://code.mpimet.mpg.de/attachments/download/16435/cdo-1.9.3.tar.gz 
     && make install \
     && rm -rf /tmp/*
 
-# R  
-RUN add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu trusty/"
-RUN apt-get update
-RUN apt-get install -y r-base
+
 RUN apt-get install -y apt-utils
 RUN apt-get install -y curl
 RUN apt-get install -y openssl
