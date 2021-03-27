@@ -20,7 +20,9 @@ RUN wget https://code.mpimet.mpg.de/attachments/download/16435/cdo-1.9.3.tar.gz 
     && make install \
     && rm -rf /tmp/*
 
-# R    
+# R  
+RUN add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu trusty/"
+RUN apt-get update
 RUN apt-get install -y r-base
 RUN apt-get install -y apt-utils
 RUN apt-get install -y curl
