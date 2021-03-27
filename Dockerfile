@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:16.04
 
 # provo ad installare cdo con pezzettino copiato da https://github.com/alexgleith/docker-cdo/blob/master/Dockerfile
 # Install some core software
