@@ -51,6 +51,7 @@ RUN wget https://code.mpimet.mpg.de/attachments/download/16435/cdo-1.9.3.tar.gz 
 #RUN R -e "install.packages('R2HTML', repos = 'http://cran.us.r-project.org')"
 
 # ftp e smbcilient
+RUN apt-get update
 RUN apt-get install -y ftp 
 RUN apt-get install -y smbclient
 
